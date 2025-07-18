@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct OrganizaAiApp: App {
+    @StateObject var authViewModel = AuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppEntryView()
+                .environmentObject(authViewModel)
+                .onAppear {
+                    authViewModel.checkAuthentication()
+                }
         }
     }
 }

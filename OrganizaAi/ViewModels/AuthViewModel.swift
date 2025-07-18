@@ -13,8 +13,14 @@ class AuthViewModel: ObservableObject {
     @Published var password = ""
     @Published var isAuthenticated = false
     @Published var errorMessage: String?
+    @Published var isLoading = false
+    @Published var showError = false
     
     func login() async {
+        isLoading = true
+        errorMessage = nil
+        showError = false
+        
         let loginRequestModel = LoginRequestModel(email: email,
                                                   password: password)
         do {
@@ -23,7 +29,10 @@ class AuthViewModel: ObservableObject {
             isAuthenticated = true
         } catch {
             errorMessage = "Login falhou. Verifique suas credenciais."
+            showError = true
         }
+        
+        isLoading = false
     }
     
     func logout() {

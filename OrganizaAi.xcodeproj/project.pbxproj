@@ -17,6 +17,9 @@
 		B6C5AACF2E297C0800D8C754 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C5AACE2E297C0800D8C754 /* LoginResponseModel.swift */; };
 		B6C5AAD12E29DFD600D8C754 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C5AAD02E29DFD600D8C754 /* TokenManager.swift */; };
 		B6C5AAD32E29E59800D8C754 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C5AAD22E29E59800D8C754 /* AuthViewModel.swift */; };
+		B6C5AAD52E29EA6200D8C754 /* AppEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C5AAD42E29EA6200D8C754 /* AppEntryView.swift */; };
+		B6C5AAD72E29EB3D00D8C754 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C5AAD62E29EB3D00D8C754 /* MainTabView.swift */; };
+		B6C5AAD92E29EB7100D8C754 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C5AAD82E29EB7100D8C754 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		B6C5AACE2E297C0800D8C754 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		B6C5AAD02E29DFD600D8C754 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		B6C5AAD22E29E59800D8C754 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		B6C5AAD42E29EA6200D8C754 /* AppEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntryView.swift; sourceTree = "<group>"; };
+		B6C5AAD62E29EB3D00D8C754 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B6C5AAD82E29EB7100D8C754 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 		B6C5AAC32E29792500D8C754 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B6C5AAD42E29EA6200D8C754 /* AppEntryView.swift */,
+				B6C5AAD62E29EB3D00D8C754 /* MainTabView.swift */,
+				B6C5AAD82E29EB7100D8C754 /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,10 +211,13 @@
 			files = (
 				B6C5AACF2E297C0800D8C754 /* LoginResponseModel.swift in Sources */,
 				B6C5AAD12E29DFD600D8C754 /* TokenManager.swift in Sources */,
+				B6C5AAD72E29EB3D00D8C754 /* MainTabView.swift in Sources */,
 				B6C5AACB2E297B5600D8C754 /* AuthService.swift in Sources */,
+				B6C5AAD52E29EA6200D8C754 /* AppEntryView.swift in Sources */,
 				B6C5AAD32E29E59800D8C754 /* AuthViewModel.swift in Sources */,
 				B6C5AACD2E297BEB00D8C754 /* LoginRequestModel.swift in Sources */,
 				B6C5AAB72E2978AD00D8C754 /* ContentView.swift in Sources */,
+				B6C5AAD92E29EB7100D8C754 /* LoginView.swift in Sources */,
 				B6C5AAB52E2978AD00D8C754 /* OrganizaAiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

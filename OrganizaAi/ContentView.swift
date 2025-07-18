@@ -16,7 +16,15 @@ struct ContentView: View {
             Text("Hello, world!")
             Button {
                 Task {
-                    await AuthService.shared.login(body: LoginRequestModel(email: "brunonmarques98@gmail.com", password: "12345678"))
+                    do {
+                        let response = try await AuthService
+                            .shared
+                            .login(body: LoginRequestModel(email: "brunonmarques98@gmail.com",
+                                                           password: "12345678"))
+                    } catch {
+                        print("Deu erro no login")
+                    }
+                    
                 }
             } label: {
                 Text("Fazer login")
