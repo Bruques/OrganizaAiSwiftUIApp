@@ -33,28 +33,25 @@ class AuthService {
                                                  of: LoginResponseModel.self)
         return response
     }
-}
-
-enum AuthError: Error, LocalizedError {
-    case invalidCredentials // Para 401 Unauthorized ou outros erros de credenciais
-    case serverError(statusCode: Int, message: String?) // Erros do servidor (5xx, ou 4xx não específicos)
-    case decodingError(Error) // Erros ao decodificar a resposta
-    case unknownError(Error) // Erros genéricos
-
-    var errorDescription: String? {
-        switch self {
-        case .invalidCredentials:
-            return "Credenciais inválidas. Verifique seu e-mail e senha."
-        case .serverError(let statusCode, let message):
-            return "Erro do servidor (\(statusCode)): \(message ?? "Ocorreu um erro inesperado no servidor.")"
-        case .decodingError(let error):
-            return "Erro de decodificação: \(error.localizedDescription)"
-        case .unknownError(let error):
-            return "Um erro desconhecido ocorreu: \(error.localizedDescription)"
-        }
+    
+    public func register(body: RegisterRequestModel) async throws -> LoginResponseModel {
+        let registerUrl = "\(baseURL)/register"
+        // TODO: - Testar para ver se preciso manter o header ou não
+        let headers: [String: String] = [
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        ]
+        
+        
+        let response = try await network.request(method: .post,
+                                                 url: registerUrl,
+                                                 headers: headers,
+                                                 params: [:],
+                                                 body: body,
+                                                 of: LoginResponseModel.self)
+        return response
     }
 }
-
 
 class NetworkManager {
     func request<T: Decodable>(

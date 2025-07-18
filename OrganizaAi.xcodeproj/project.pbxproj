@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B640F4BF2E2AABBB00C1157F /* RegisterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4BE2E2AABB300C1157F /* RegisterRequestModel.swift */; };
+		B640F4C12E2AACEB00C1157F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4C02E2AACEB00C1157F /* RegisterViewModel.swift */; };
+		B640F4C32E2AAD5200C1157F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4C22E2AAD5200C1157F /* RegisterView.swift */; };
 		B6C5AAB52E2978AD00D8C754 /* OrganizaAiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C5AAB42E2978AD00D8C754 /* OrganizaAiApp.swift */; };
 		B6C5AAB72E2978AD00D8C754 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C5AAB62E2978AD00D8C754 /* ContentView.swift */; };
 		B6C5AAB92E2978AE00D8C754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C5AAB82E2978AE00D8C754 /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B640F4BE2E2AABB300C1157F /* RegisterRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequestModel.swift; sourceTree = "<group>"; };
+		B640F4C02E2AACEB00C1157F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		B640F4C22E2AAD5200C1157F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		B6C5AAB12E2978AD00D8C754 /* OrganizaAi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrganizaAi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C5AAB42E2978AD00D8C754 /* OrganizaAiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizaAiApp.swift; sourceTree = "<group>"; };
 		B6C5AAB62E2978AD00D8C754 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 		B6C5AAC22E29790F00D8C754 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B640F4BE2E2AABB300C1157F /* RegisterRequestModel.swift */,
 				B6C5AACC2E297BEB00D8C754 /* LoginRequestModel.swift */,
 				B6C5AACE2E297C0800D8C754 /* LoginResponseModel.swift */,
 			);
@@ -105,6 +112,7 @@
 				B6C5AAD42E29EA6200D8C754 /* AppEntryView.swift */,
 				B6C5AAD62E29EB3D00D8C754 /* MainTabView.swift */,
 				B6C5AAD82E29EB7100D8C754 /* LoginView.swift */,
+				B640F4C22E2AAD5200C1157F /* RegisterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C5AAD22E29E59800D8C754 /* AuthViewModel.swift */,
+				B640F4C02E2AACEB00C1157F /* RegisterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -211,10 +220,13 @@
 			files = (
 				B6C5AACF2E297C0800D8C754 /* LoginResponseModel.swift in Sources */,
 				B6C5AAD12E29DFD600D8C754 /* TokenManager.swift in Sources */,
+				B640F4C32E2AAD5200C1157F /* RegisterView.swift in Sources */,
 				B6C5AAD72E29EB3D00D8C754 /* MainTabView.swift in Sources */,
 				B6C5AACB2E297B5600D8C754 /* AuthService.swift in Sources */,
 				B6C5AAD52E29EA6200D8C754 /* AppEntryView.swift in Sources */,
+				B640F4BF2E2AABBB00C1157F /* RegisterRequestModel.swift in Sources */,
 				B6C5AAD32E29E59800D8C754 /* AuthViewModel.swift in Sources */,
+				B640F4C12E2AACEB00C1157F /* RegisterViewModel.swift in Sources */,
 				B6C5AACD2E297BEB00D8C754 /* LoginRequestModel.swift in Sources */,
 				B6C5AAB72E2978AD00D8C754 /* ContentView.swift in Sources */,
 				B6C5AAD92E29EB7100D8C754 /* LoginView.swift in Sources */,

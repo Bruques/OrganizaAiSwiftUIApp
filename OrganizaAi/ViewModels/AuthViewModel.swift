@@ -47,4 +47,8 @@ class AuthViewModel: ObservableObject {
             isAuthenticated = false
         }
     }
+    
+    func makeRegisterViewModel() -> RegisterViewModel {
+        return RegisterViewModel()
+    }
 }

@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var viewModel: AuthViewModel
 
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showErrorAlert: Bool = false
+    
+    @State private var navigateToRegister = false
 
     var body: some View {
         NavigationView {
@@ -22,7 +24,7 @@ struct LoginView: View {
                     .bold()
 
                 VStack(alignment: .leading, spacing: 15) {
-                    TextField("Email", text: $authViewModel.email)
+                    TextField("Email", text: $viewModel.email)
                         .keyboardType(.emailAddress)
                         .textContentType(.emailAddress)
                         .autocapitalization(.none)
@@ -30,21 +32,21 @@ struct LoginView: View {
                         .background(Color(.systemGray6))
                         .cornerRadius(10)
 
-                    SecureField("Senha", text: $authViewModel.password)
+                    SecureField("Senha", text: $viewModel.password)
                         .textContentType(.password)
                         .padding()
                         .background(Color(.systemGray6))
                         .cornerRadius(10)
                 }
 
-                if authViewModel.isLoading {
+                if viewModel.isLoading {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
                         .padding(.top)
                 } else {
                     Button(action: {
                         Task {
-                            await authViewModel.login()
+                            await viewModel.login()
                         }
                     }) {
                         Text("Entrar")
@@ -54,17 +56,30 @@ struct LoginView: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
-//                    .disabled(email.isEmpty || password.isEmpty)
+                    // TODO: - criar método na viewModel para fazer essa validação
+                    .disabled(viewModel.email.isEmpty || viewModel.password.isEmpty)
+//                    .background(email.isEmpty || password.isEmpty ? .opacity(0.5) : .opacity(1))
+                    .opacity(viewModel.email.isEmpty || viewModel.password.isEmpty ? 0.5 : 1)
                 }
-
                 Spacer()
+                NavigationLink(destination: RegisterView(viewModel: self.viewModel.makeRegisterViewModel()),
+                               isActive: $navigateToRegister) {
+                    Button {
+                        navigateToRegister = true
+                    } label: {
+                        Text("Não tem uma conta? Registre-se")
+                            .bold()
+                    }
+
+                }
             }
             .padding()
-            .alert(isPresented: $authViewModel.showError) {
+            .alert(isPresented: $viewModel.showError) {
                 Alert(title: Text("Erro"),
-                      message: Text(authViewModel.errorMessage ?? ""),
+                      message: Text(viewModel.errorMessage ?? ""),
                       dismissButton: .default(Text("OK")))
             }
+            
         }
     }
 }
