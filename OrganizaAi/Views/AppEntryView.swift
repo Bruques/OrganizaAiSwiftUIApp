@@ -14,6 +14,7 @@ struct AppEntryView: View {
         Group {
             if authViewModel.isAuthenticated {
                 MainTabView()
+                    .environmentObject(authViewModel)
             } else {
                 LoginView()
             }

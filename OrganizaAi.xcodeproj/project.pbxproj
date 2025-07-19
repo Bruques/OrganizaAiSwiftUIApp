@@ -10,6 +10,11 @@
 		B640F4BF2E2AABBB00C1157F /* RegisterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4BE2E2AABB300C1157F /* RegisterRequestModel.swift */; };
 		B640F4C12E2AACEB00C1157F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4C02E2AACEB00C1157F /* RegisterViewModel.swift */; };
 		B640F4C32E2AAD5200C1157F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4C22E2AAD5200C1157F /* RegisterView.swift */; };
+		B640F4C52E2B1C3D00C1157F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4C42E2B1C3D00C1157F /* NetworkManager.swift */; };
+		B640F4C72E2B1D2000C1157F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4C62E2B1D2000C1157F /* DashboardView.swift */; };
+		B640F4C92E2B1D4C00C1157F /* IncomesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4C82E2B1D4C00C1157F /* IncomesView.swift */; };
+		B640F4CB2E2B1D5E00C1157F /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4CA2E2B1D5E00C1157F /* ExpensesView.swift */; };
+		B640F4CD2E2B1D7900C1157F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F4CC2E2B1D7900C1157F /* ProfileView.swift */; };
 		B6C5AAB52E2978AD00D8C754 /* OrganizaAiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C5AAB42E2978AD00D8C754 /* OrganizaAiApp.swift */; };
 		B6C5AAB72E2978AD00D8C754 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C5AAB62E2978AD00D8C754 /* ContentView.swift */; };
 		B6C5AAB92E2978AE00D8C754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C5AAB82E2978AE00D8C754 /* Assets.xcassets */; };
@@ -29,6 +34,11 @@
 		B640F4BE2E2AABB300C1157F /* RegisterRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequestModel.swift; sourceTree = "<group>"; };
 		B640F4C02E2AACEB00C1157F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B640F4C22E2AAD5200C1157F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		B640F4C42E2B1C3D00C1157F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B640F4C62E2B1D2000C1157F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		B640F4C82E2B1D4C00C1157F /* IncomesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomesView.swift; sourceTree = "<group>"; };
+		B640F4CA2E2B1D5E00C1157F /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
+		B640F4CC2E2B1D7900C1157F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B6C5AAB12E2978AD00D8C754 /* OrganizaAi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrganizaAi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C5AAB42E2978AD00D8C754 /* OrganizaAiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizaAiApp.swift; sourceTree = "<group>"; };
 		B6C5AAB62E2978AD00D8C754 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +123,10 @@
 				B6C5AAD62E29EB3D00D8C754 /* MainTabView.swift */,
 				B6C5AAD82E29EB7100D8C754 /* LoginView.swift */,
 				B640F4C22E2AAD5200C1157F /* RegisterView.swift */,
+				B640F4C62E2B1D2000C1157F /* DashboardView.swift */,
+				B640F4C82E2B1D4C00C1157F /* IncomesView.swift */,
+				B640F4CA2E2B1D5E00C1157F /* ExpensesView.swift */,
+				B640F4CC2E2B1D7900C1157F /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C5AACA2E297B5600D8C754 /* AuthService.swift */,
+				B640F4C42E2B1C3D00C1157F /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -225,9 +240,14 @@
 				B6C5AACB2E297B5600D8C754 /* AuthService.swift in Sources */,
 				B6C5AAD52E29EA6200D8C754 /* AppEntryView.swift in Sources */,
 				B640F4BF2E2AABBB00C1157F /* RegisterRequestModel.swift in Sources */,
+				B640F4C72E2B1D2000C1157F /* DashboardView.swift in Sources */,
 				B6C5AAD32E29E59800D8C754 /* AuthViewModel.swift in Sources */,
 				B640F4C12E2AACEB00C1157F /* RegisterViewModel.swift in Sources */,
+				B640F4CD2E2B1D7900C1157F /* ProfileView.swift in Sources */,
+				B640F4CB2E2B1D5E00C1157F /* ExpensesView.swift in Sources */,
 				B6C5AACD2E297BEB00D8C754 /* LoginRequestModel.swift in Sources */,
+				B640F4C52E2B1C3D00C1157F /* NetworkManager.swift in Sources */,
+				B640F4C92E2B1D4C00C1157F /* IncomesView.swift in Sources */,
 				B6C5AAB72E2978AD00D8C754 /* ContentView.swift in Sources */,
 				B6C5AAD92E29EB7100D8C754 /* LoginView.swift in Sources */,
 				B6C5AAB52E2978AD00D8C754 /* OrganizaAiApp.swift in Sources */,
