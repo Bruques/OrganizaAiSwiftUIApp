@@ -9,6 +9,13 @@ import Foundation
 import Alamofire
 
 class NetworkManager {
+    private let session: Session
+    
+    init() {
+        let interceptor = AuthInterceptor()
+        self.session = Session(interceptor: interceptor)
+    }
+    
     func request<T: Decodable>(
         method: HTTPMethod,
         url: String,
@@ -39,7 +46,7 @@ class NetworkManager {
         }
         
         return try await withCheckedThrowingContinuation { continuation in
-            AF.request(
+            session.request(
                 url,
                 method: method,
                 parameters: requestParameters,
